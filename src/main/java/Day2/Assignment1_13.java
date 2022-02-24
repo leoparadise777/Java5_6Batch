@@ -20,6 +20,7 @@ public class Assignment1_13 {
                 }
             }
         }
+        // System.out.println(1>0?"A":"B");
     }
 
     public static int doSomthing(int n){
