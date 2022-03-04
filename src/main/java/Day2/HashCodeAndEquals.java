@@ -20,6 +20,21 @@ class Node{
         this.value = value;
     }
 
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true; //reference
+        if (!(this instanceof Node)) return false; // datatype
+        Node node = (Node) o;
+        return node.value == node.value; // content
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(value);
+    }
+
+
+
     /*
     @Override
     public boolean equals(Object o){
@@ -34,7 +49,7 @@ class Node{
         return this.value;
     }*/
 
-
+    /*
     // auto generate by IDE
     @Override
     public boolean equals(Object o) {
@@ -48,4 +63,5 @@ class Node{
     public int hashCode() {
         return Objects.hash(value);
     }
+    */
 }

@@ -1,5 +1,7 @@
 package Day7;
 
+import java.util.*;
+
 public class LC146_LRUCache {
 
     public static void main(String[] args) {
@@ -15,6 +17,22 @@ public class LC146_LRUCache {
         System.out.println(c1.get(3));
         System.out.println(c1.get(4));
 
+        Map<Integer, Integer> lhm = new LinkedHashMap<>();
+        lhm.put(1, 1);
+        lhm.put(2, 2);
+        System.out.println(lhm);
+        int res = lhm.get(2);
+        System.out.println(res);
+        System.out.println(lhm);
+
+
+
+
+    }
+    private static void mRecent(int key, Map<Integer, Integer> m) {
+        int temp=m.get(key);
+        m.remove(key);
+        m.put(key,temp);
     }
 
 
