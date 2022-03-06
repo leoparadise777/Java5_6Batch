@@ -22,10 +22,11 @@ class Node{
 
     @Override
     public boolean equals(Object o){
-        if (this == o) return true; //reference
-        if (!(this instanceof Node)) return false; // datatype
+        if (this == o) return true; // reference
+        if (!(this instanceof Node)) return false;  // data type
         Node node = (Node) o;
-        return node.value == node.value; // content
+        return this.value == node.value; // content
+
     }
 
     @Override
